@@ -42,10 +42,9 @@
             object2.BackColor = Color.Red;
             object2.Location = new Point(551, 244);
             object2.Name = "object2";
-            object2.Size = new Size(172, 157);
+            object2.Size = new Size(100, 100);
             object2.TabIndex = 5;
             object2.TabStop = false;
-            object2.Paint += object2_Paint;
             // 
             // mainTimer
             // 
@@ -58,31 +57,32 @@
             object1.BackColor = Color.Lime;
             object1.Location = new Point(151, 244);
             object1.Name = "object1";
-            object1.Size = new Size(172, 157);
+            object1.Size = new Size(100, 100);
             object1.TabIndex = 4;
             object1.TabStop = false;
-            object1.Paint += object1_Paint;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.ButtonFace;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(141, 25);
+            label1.Size = new Size(281, 25);
             label1.TabIndex = 6;
-            label1.Text = "ÇARPIŞMA --??";
+            label1.Text = "COLLISION DID NOT OCCURRED";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(984, 661);
             Controls.Add(label1);
             Controls.Add(object2);
             Controls.Add(object1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Burakodbs/collisionCheckOnForm";
             KeyDown += keyisDown;
             KeyUp += keyisUp;
             ((System.ComponentModel.ISupportInitialize)object2).EndInit();

@@ -3,8 +3,6 @@ namespace collisionCheckOnForm
     public partial class Form1 : Form
     {
         bool moveUp, moveDown, moveRight, moveLeft, moveUp2, moveDown2, moveRight2, moveLeft2;
-        int height = 100, width = 100;
-        int height2 = 100, width2 = 100;
         int speed = 15;
         public Form1()
         {
@@ -12,35 +10,35 @@ namespace collisionCheckOnForm
         }
         private void mainTimerEvent(object sender, EventArgs e)
         {
-            if (moveUp == true && object2.Top > 0)
+            if (moveUp == true && object2.Top > 1)
             {
                 object2.Top -= speed;
             }
-            if (moveDown == true && object2.Top < 505)
+            if (moveDown == true && object2.Top < 550)
             {
                 object2.Top += speed;
             }
-            if (moveLeft == true && object2.Left > 0)
+            if (moveLeft == true && object2.Left > 1)
             {
                 object2.Left -= speed;
             }
-            if (moveRight == true && object2.Left < 812)
+            if (moveRight == true && object2.Left < 880)
             {
                 object2.Left += speed;
             }
-            if (moveUp2 == true && object1.Top > 0)
+            if (moveUp2 == true && object1.Top > 1)
             {
                 object1.Top -= speed;
             }
-            if (moveDown2 == true && object1.Top < 505)
+            if (moveDown2 == true && object1.Top < 550)
             {
                 object1.Top += speed;
             }
-            if (moveLeft2 == true && object1.Left > 0)
+            if (moveLeft2 == true && object1.Left > 1)
             {
                 object1.Left -= speed;
             }
-            if (moveRight2 == true && object1.Left < 812)
+            if (moveRight2 == true && object1.Left < 880)
             {
                 object1.Left += speed;
             }
@@ -124,27 +122,5 @@ namespace collisionCheckOnForm
                 moveRight2 = false;
             }
         }
-
-        private void object1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pen1 = new Pen(Color.White);
-            object1.Height = height;
-            object1.Width = width;
-
-            g.DrawRectangle(pen1, 0, 0, width, height);
-        }
-
-        private void object2_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pen1 = new Pen(Color.White);
-            object2.Height =    height2;
-            object2.Width = width2;
-
-            g.DrawRectangle(pen1, 0, 0, width2, height2);
-        }
-
-
     }
 }
